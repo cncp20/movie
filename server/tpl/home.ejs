@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand flex-column  flex-md-row ">
+        <a href="/" class="navbar-brand mr-0 mr-md-2">豆瓣预告片</a>
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a href="/link1" class="nav-link">快捷链接1</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/link2" class="nav-link">快捷链接2</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="row">
+        <div class="col-md-3">
+            <ul>
+                <li>Link1</li>
+                <li>Link2</li>
+                <li>Link3</li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <% for(let i = 0; i < arr.length; i++) { %>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2512123434.webp" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 class="card-title"><%=arr[i].title%></h4>
+                                <p class="card-desc"><%=arr[i].desc%></p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">1天前更新</small>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
